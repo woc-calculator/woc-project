@@ -23,7 +23,7 @@
             </div>
 
             <div class="row">
-                <button onclick="sin()">sin</button>
+                <button id="sin" onclick="sin()">sin</button>
                 <button onclick="pi()">pi</button>
                 <button class="btn">7</button>
                 <button class="btn">8</button>
@@ -51,7 +51,7 @@
 
             <div class="row">
                 <button onclick="e()">e</button>
-                <button class="btn">x<span style="position: relative; bottom: .4em; right: .lem;">y</span></button>
+                <button class="btn">x<span style="position: relative; bottom: .4em; right: lem;">y</span></button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
                 <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
@@ -91,10 +91,39 @@
             
         });
     }
+    // let sinfxn=document.getElementById("sin")
+// sinfxn.addEventListener("click",function()
+// {
+    // let name=prompt("degree or radian")
+
+// if(name="degree"){
+    
+    
+    // screen.value=screen.value*57.272727;
     function sin()
     {
-        screen.value=Math.sin(screen.value);
+        let sinfxn=document.getElementById("sin");
+        sinfxn.addEventListener("click",function(){
+{
+        let name=prompt("degree or radian");
+}
+
+        if(name="degree")
+        {
+            screen.value=screen.value*3.141592653359/180;
+        }
+        else{
+            screen.value=screen.value;
+        }
+    screen.value=Math.sin(screen.value);
+    })
+    
     }
+
+    // function sin()
+    // {
+        // screen.value=Math.sin(screen.value);
+    // }
     function cos()
     {
         screen.value=Math.cos(screen.value);
@@ -145,6 +174,6 @@
     
     
 
-</script>
-<script src="calci.js"></script>
+// </script>
+ <!-- <script src="calci.js"></script> -->
 </html>
