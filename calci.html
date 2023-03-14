@@ -58,6 +58,18 @@
                 <button class="btn">+</button>
             </div>
 
+            <div class="row">
+                 
+                <button onclick="Dec()">DEC</button>
+                <button onclick="hex()" >HEX</button>
+                <button  onclick="oct()" >OCT</button>
+                <button   onclick="bin()" >BIN</button>
+                <button  onclick="his()">History</button>
+                <button  onclick="save()" >Save</button>
+
+                
+                </div>
+
 
         </div>
 
@@ -171,6 +183,32 @@
         {
             screen.value=screen.value.substr(0,screen.value.length-1)
         }
+
+        function dec(){
+        const decimal=parseInt( screen.value,10);
+        screen.value=decimal.toString(10);
+
+    }
+    function bin(){
+         
+        const decimal=parseInt( screen.value,10);
+        screen.value=+decimal.toString(2);
+        
+
+    }
+    function oct(){
+        
+        const decimal=parseInt( screen.value,10);
+        screen.value=decimal.toString(8);
+
+    }
+    function hex(){
+        const decimal=parseInt( screen.value,10);
+        screen.value=decimal.toString(16);
+
+    }
+    
+      
     
     
 
