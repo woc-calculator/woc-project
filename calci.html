@@ -51,7 +51,7 @@
 
             <div class="row">
                 <button onclick="e()">e</button>
-                <button class="btn">x<span style="position: relative; bottom: .4em; right: lem;">y</span></button>
+                <button class="btn" onclick="pow()">x<span style="position: relative; bottom: .4em; right: lem;">y</span></button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
                 <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
@@ -64,7 +64,7 @@
                 <button onclick="hex()" >HEX</button>
                 <button  onclick="oct()" >OCT</button>
                 <button   onclick="bin()" >BIN</button>
-                <button  onclick="his()">History</button>
+                <button  onclick="his()">Undo</button>
                 <button  onclick="save()" >Save</button>
 
                 
@@ -93,56 +93,60 @@
         
             }
 
-    
-           
-            
-
-
-            
-            screen.value+=btntext;
+    screen.value+=btntext;
             
         });
     }
-    // let sinfxn=document.getElementById("sin")
-// sinfxn.addEventListener("click",function()
-// {
-    // let name=prompt("degree or radian")
-
-// if(name="degree"){
     
-    
-    // screen.value=screen.value*57.272727;
-    function sin()
-    {
-        let sinfxn=document.getElementById("sin");
-        sinfxn.addEventListener("click",function(){
-{
-        let name=prompt("degree or radian");
-}
+    function sin() {
+        
+        let name =prompt("degree or radian",)
 
-        if(name="degree")
-        {
-            screen.value=screen.value*3.141592653359/180;
-        }
-        else{
-            screen.value=screen.value;
-        }
-    screen.value=Math.sin(screen.value);
-    })
+    if(name=="degree"){
+        screen.value=screen.value*(3.14159265359/180);
+        screen.value = Math.sin(screen.value);
+    }
+    else if(name=="radian"){
+
+   
+    screen.value = Math.sin(screen.value);
     
     }
+} 
+    
 
-    // function sin()
-    // {
-        // screen.value=Math.sin(screen.value);
-    // }
-    function cos()
-    {
+     
+    function cos(){
+    let name =prompt("degree or radian",)
+
+    if(name=="degree"){
+        screen.value=screen.value*(3.14159265359/180);
         screen.value=Math.cos(screen.value);
     }
+    else if(name=="radian"){
+
+        screen.value=Math.cos(screen.value);
+   
+    
+    }
+}
+        
+    
     function tan()
     {
+        let name =prompt("degree or radian",)
+
+    if(name=="degree"){
+        screen.value=screen.value*(3.14159265359/180);
         screen.value=Math.tan(screen.value);
+    }
+    else if(name=="radian"){
+
+        screen.value=Math.tan(screen.value);
+   
+    
+    }
+        
     }
     function pow()
     {
@@ -185,7 +189,7 @@
         }
 
         function dec(){
-        const decimal=parseInt( screen.value,10);
+        //const decimal=parseInt( screen.value,10);
         screen.value=decimal.toString(10);
 
     }
