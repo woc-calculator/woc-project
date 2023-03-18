@@ -60,7 +60,7 @@
 
             <div class="row">
                  
-                <button onclick="Dec()">DEC</button>
+                <button onclick="dec()">DEC</button>
                 <button onclick="hex()" >HEX</button>
                 <button  onclick="oct()" >OCT</button>
                 <button   onclick="bin()" >BIN</button>
@@ -100,53 +100,55 @@
     
     function sin() {
         
-        let name =prompt("degree or radian",)
+    //     let name =prompt("degree or radian",)
 
-    if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value = Math.sin(screen.value);
-    }
-    else if(name=="radian"){
+    // if(name=="degree"){
+    //     screen.value=screen.value*(3.14159265359/180);
+    //     screen.value = Math.sin(screen.value);
+    // }
+    // else if(name=="radian"){
 
    
-    screen.value = Math.sin(screen.value);
+    // screen.value = Math.sin(screen.value);
     
-    }
+    // }
+    screen.value = Math.sin(screen.value);
 } 
     
 
      
     function cos(){
-    let name =prompt("degree or radian",)
+    // let name =prompt("degree or radian",)
 
-    if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value=Math.cos(screen.value);
-    }
-    else if(name=="radian"){
+    // if(name=="degree"){
+    //     screen.value=screen.value*(3.14159265359/180);
+    //     screen.value=Math.cos(screen.value);
+    // }
+    // else if(name=="radian"){
 
-        screen.value=Math.cos(screen.value);
+    //     screen.value=Math.cos(screen.value);
    
     
-    }
+    // }
+    screen.value=Math.cos(screen.value);
 }
         
     
     function tan()
     {
-        let name =prompt("degree or radian",)
+    //     let name =prompt("degree or radian",)
 
-    if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value=Math.tan(screen.value);
-    }
-    else if(name=="radian"){
+    // if(name=="degree"){
+    //     screen.value=screen.value*(3.14159265359/180);
+    //     screen.value=Math.tan(screen.value);
+    // }
+    // else if(name=="radian"){
 
-        screen.value=Math.tan(screen.value);
+    //     screen.value=Math.tan(screen.value);
    
     
-    }
-        
+    // }
+    screen.value=Math.tan(screen.value);
     }
     function pow()
     {
@@ -189,7 +191,7 @@
         }
 
         function dec(){
-        //const decimal=parseInt( screen.value,10);
+        const decimal=parseInt( screen.value,10);
         screen.value=decimal.toString(10);
 
     }
@@ -209,6 +211,7 @@
     function hex(){
         const decimal=parseInt( screen.value,10);
         screen.value=decimal.toString(16);
+        console.log(decimal)
 
     }
     
