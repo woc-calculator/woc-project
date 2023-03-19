@@ -28,7 +28,7 @@
                 <button class="btn">7</button>
                 <button class="btn">8</button>
                 <button class="btn">9</button>
-                <button class="btn">/</button>
+                <button class="btn">÷</button>
             </div>
 
             <div class="row">
@@ -42,7 +42,7 @@
 
             <div class="row">
                 <button onclick="tan()">tan</button>
-                <button onclick="sqrt()">root</button>
+                <button onclick="sqrt()">√</button>
                 <button class="btn">1</button>
                 <button class="btn">2</button>
                 <button class="btn">3</button>
@@ -54,7 +54,7 @@
                 <button class="btn" onclick="pow()">x<span style="position: relative; bottom: .4em; right: lem;">y</span></button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
-                <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+                <button id="eval" onclick= "screen.value=screen.value + '=' + eval(screen.value)">=</button>
                 <button class="btn">+</button>
             </div>
 
@@ -92,6 +92,10 @@
                 btntext='*';
         
             }
+            if(btntext=='÷')
+            {
+                btntext='/';
+            }
 
     screen.value+=btntext;
             
@@ -121,12 +125,12 @@
     let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value=Math.cos(screen.value);
+        screen.Value=screen.value*(3.14159265359/180);
+        screen.value= Math.cos(screen.Value);
     }
     else if(name=="radian"){
 
-        screen.value=Math.cos(screen.value);
+        screen.value=  Math.cos(screen.Value);
    
     
     }
@@ -152,11 +156,12 @@
     }
     function pow()
     {
-        screen.value=Math.pow(screen.value,2);
+        let degree = prompt("enter the degree","enter the value of y")
+        screen.value=  Math.pow(screen.value,degree);
     }
     function sqrt()
     {
-        screen.value=Math.sqrtr(screen.value,2);
+        screen.value= screen.value + '=' +Math.sqrt(screen.value,2);
     }
     function log()
     {
@@ -214,6 +219,7 @@
         console.log(decimal)
 
     }
+
     
       
     
