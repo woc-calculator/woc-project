@@ -138,7 +138,7 @@
         let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
+        screen.value=eval(screen.value)*(3.14159265359/180);
         screen.value = Math.sin(screen.value);
     }
     else if(name=="radian"){
@@ -156,7 +156,7 @@
     let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
+        screen.value=eval(screen.value)*(3.14159265359/180);
         screen.value= Math.cos(eval(screen.value));
     }
     else if(name=="radian"){
@@ -174,8 +174,8 @@
         let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value=Math.tan(eval(screen.value));
+        screen.value=eval(screen.value)*(3.14159265359/180);
+        screen.value=Math.tan(screen.value);
     }
     else if(name=="radian"){
 
