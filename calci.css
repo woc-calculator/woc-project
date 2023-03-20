@@ -55,14 +55,14 @@ background-color: #ffffff;
     outline: none;
     margin: 5px;
     border-radius: 4px;
-    box-shadow: 5px 5px 8px #15b3a120,
+    box-shadow: 5px 5px 8px #00000020,
                -5px -5px 8px #ffffff; 
                transition: .1s;
 }
-.btns .row button:hover
-{ 
-    box-shadow: inset 5px 5px 8px  rgba(16, 16, 16, .1),
-                inset -5px -5px 8px #ffffff ;
+btns.row button:hover;
+{
+    box-shadow: insert 5px 5px 8px rgba(16,16,16,.1),
+                insert -5px -5px 8px #fff;
                 background: #fff;
 }
 
@@ -70,25 +70,7 @@ background-color: #ffffff;
 
 #eval
 {
-background: #29e6d6 ;
-color: #fff;
-box-shadow: inset 5px 5px 8px #66d9ff;
-            inset: -5px -5px 8px #00ace6;
-}
-
-#eval:hover
-{box-shadow: inset 5px 5px 8px #00ace6;
-         inset: -5px -5px 8px #00ace6;
-}
-
-#ac
-{
-background: #fd7cabf7;
-color: #fff;
-}
-#ac:hover 
-{box-shadow: inset 5px 5px 8px #f21b7fa9;
-         inset: -5px -5px 8px #f21b7fa9;
+    background:
 }
 
 #ce
@@ -100,3 +82,12 @@ color: #fff;
 {box-shadow: inset 5px 5px 8px #5b36d4a9;
          inset: -5px -5px 8px #5b36d4a9;
 }
+/* .left{
+    display:inline-block;
+    border: 2px solid red;
+    top:0px;
+    position:absolute;
+    left:30px;
+    margin-top: 23px;
+
+} */

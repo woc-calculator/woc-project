@@ -9,6 +9,7 @@
     
 </head>
 <body>
+<<<<<<< HEAD
     
     <style type="text/css">
         body{
@@ -34,6 +35,9 @@
       </body>
     
     
+=======
+    <!-- <h1> WELCOME TO CALCULATOR </h1> -->
+>>>>>>> 8c6090a7ec4f761f7fd691e09b323d432b2f4597
     <div class="container">
         <style type="text/css">
         
@@ -50,15 +54,23 @@
         <div class="display">
             <input id="screen" type="text" placeholder="0">
         </div>
-        <div class="btns">
-            <div class="row">
-                <button id="ce" onclick="backspc()">CE</button>
-                <button onclick="fact">X!</button>
-                <button class="btn">(</button>
-                <button class="btn">)</button>
-                <button class="btn">%</button>
-                <button id="ac" onclick="screen.value=' '">AC</button>
-            </div>
+        <div class="btns"> 
+             <div class="row">
+                
+                
+                    
+                        <button id="ce" onclick="backspc()">CE</button>
+                        <button onclick="fact">!</button>
+                        <button class="btn">(</button>
+                        <button class="btn">)</button>
+                        <button id ="percent" onclick="perc()">%</button>
+                        <button id="ac" onclick="screen.value=' '">AC</button>
+                    
+
+              </div>          
+
+            
+                
 
             <div class="row">
                 <button id="sin" onclick="sin()">sin</button>
@@ -66,7 +78,7 @@
                 <button class="btn">7</button>
                 <button class="btn">8</button>
                 <button class="btn">9</button>
-                <button class="btn">/</button>
+                <button class="btn">÷</button>
             </div>
 
             <div class="row">
@@ -80,7 +92,7 @@
 
             <div class="row">
                 <button onclick="tan()">tan</button>
-                <button onclick="sqrt()">root</button>
+                <button onclick="pow()">√</button>
                 <button class="btn">1</button>
                 <button class="btn">2</button>
                 <button class="btn">3</button>
@@ -92,7 +104,7 @@
                 <button class="btn" onclick="pow()">x<span style="position: relative; bottom: .4em; right: lem;">y</span></button>
                 <button class="btn">0</button>
                 <button class="btn">.</button>
-                <button id="eval" onclick="screen.value=eval(screen.value)">=</button>
+                <button id="eval" onclick= "screen.value=screen.value + '=' + eval(screen.value)">=</button>
                 <button class="btn">+</button>
             </div>
 
@@ -115,12 +127,14 @@
 
 
 
+    
     </div>
 </body>
 <script>
     var screen=document.querySelector( '#screen');
     var btn=document.querySelectorAll( '.btn');
 
+    
     for( item of btn)
     {
         item.addEventListener('click',(e)=>{
@@ -130,18 +144,42 @@
                 btntext='*';
         
             }
+            if(btntext=='÷')
+            {
+                btntext='/';
+            }
 
     screen.value+=btntext;
             
         });
     }
+    // let percentfxn=document.getElementById("percent")
+    // percentfxn.addEventListener(click(),function(){
+        function perc(){
+
+
+        let percent =prompt("what you want to cal. 'percentage' or 'percentage of'","enter words from single quotes");
+        if(percent=="percentage")
+        {
+            let value = prompt("Enter the value less than screen value ","obtained value");
+            screen.value=value*100/screen.value;
+           
+        }
+        else if(percent=="percentage of")
+        {
+            let percent = prompt("Enter the value","less than hundred");
+            screen.value=screen.value*percent/100;
+
+        }
+    }
+    
     
     function sin() {
         
         let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
+        screen.value=eval(screen.value)*(3.14159265359/180);
         screen.value = Math.sin(screen.value);
     }
     else if(name=="radian"){
@@ -159,12 +197,12 @@
     let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
-        screen.value=Math.cos(screen.value);
+        screen.value=eval(screen.value)*(3.14159265359/180);
+        screen.value= Math.cos(eval(screen.value));
     }
     else if(name=="radian"){
 
-        screen.value=Math.cos(screen.value);
+        screen.value=  Math.cos((screen.value));
    
     
     }
@@ -177,12 +215,12 @@
         let name =prompt("degree or radian",)
 
     if(name=="degree"){
-        screen.value=screen.value*(3.14159265359/180);
+        screen.value=eval(screen.value)*(3.14159265359/180);
         screen.value=Math.tan(screen.value);
     }
     else if(name=="radian"){
 
-        screen.value=Math.tan(screen.value);
+        screen.value=Math.tan(eval(screen.value));
    
     
     }
@@ -190,15 +228,18 @@
     }
     function pow()
     {
-        screen.value=Math.pow(screen.value,2);
+        let degree = prompt("enter the degree","enter the value of y")
+        screen.value=  Math.pow(eval(screen.value),degree);
     }
-    function sqrt()
+    function pow()
     {
-        screen.value=Math.sqrtr(screen.value,2);
+        let root =prompt("enter the fraction value ","less than 1");
+        screen.value= screen.value + '=' + Math.pow(eval(screen.value),eval(root));
+
     }
     function log()
     {
-        screen.value=Math.log(screen.value);
+        screen.value=Math.log(eval(screen.value));
     }
     function pi()
     {
@@ -210,16 +251,17 @@
     }
         function fact()
         {
-            var i,num,f;
+            let i,num,f;
             f=1
             num=screen.value;
             for(i=1; i<=num; i++)
             {
-                f=f*i
+                f=f*i;
             }
             i=i-1;
             
-            screen.value=f
+            
+            screen.value=f;
 
         }
 
@@ -230,33 +272,37 @@
 
         function dec(){
         const decimal=parseInt( screen.value,10);
-        screen.value=decimal.toString(10);
+        screen.value= screen.value+"in decimal"+"="+ decimal.toString(10);
 
     }
     function bin(){
          
         const decimal=parseInt( screen.value,10);
-        screen.value=+decimal.toString(2);
+        screen.value=screen.value+"in binary"+"="+decimal.toString(2);
         
 
     }
     function oct(){
         
         const decimal=parseInt( screen.value,10);
-        screen.value=decimal.toString(8);
+        screen.value= screen.value + "in octal"+ "=" + decimal.toString(8);
 
     }
     function hex(){
         const decimal=parseInt( screen.value,10);
-        screen.value=decimal.toString(16);
+        screen.value=screen.value+"in hexadecimal"+"="+decimal.toString(16);
         console.log(decimal)
 
     }
+    
+        
+    
+
     
       
     
     
 
-// </script>
- <!-- <script src="calci.js"></script> -->
+ </script>
+ <script src="calci.js"></script>
 </html>
