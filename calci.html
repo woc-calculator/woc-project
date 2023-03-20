@@ -29,7 +29,7 @@
         <table cellspacing="20">
             <tr>
                <td> <h2> NOTE:</h2> </td>
-               <td> <p> For evaluating Functions first enter the numeric value <br> and then enter the Function you want to Evaluate.</p></td>  
+               <td> <p> For evaluating Functions first enter the numeric <br> value  and then enter the Function you want to Evaluate.</p></td>  
             </tr>
                     </table>
       </body>
@@ -87,7 +87,7 @@
 
             <div class="row">
                 <button onclick="tan()">tan</button>
-                <button onclick="pow()">√</button>
+                <button onclick="pow2()">√</button>
                 <button class="btn">1</button>
                 <button class="btn">2</button>
                 <button class="btn">3</button>
@@ -110,9 +110,7 @@
                 <button  onclick="oct()" >OCT</button>
                 <button   onclick="bin()" >BIN</button>
                 <button  onclick="his()">Undo</button>
-                <button  onclick="save()" >Save</button>
-
-                
+                <button  onclick="calculation(screen.value)" >Save</button>
                 </div>
 
 
@@ -123,6 +121,10 @@
 
 
     
+    </div>
+    <div id="history">
+      <h3> History</h3>
+      <p> </p>
     </div>
 </body>
 <script>
@@ -226,7 +228,7 @@
         let degree = prompt("enter the degree","enter the value of y")
         screen.value=  Math.pow(eval(screen.value),degree);
     }
-    function pow()
+    function pow2()
     {
         let root =prompt("enter the fraction value ","less than 1");
         screen.value= screen.value + '=' + Math.pow(eval(screen.value),eval(root));
@@ -291,7 +293,14 @@
     }
     
         
-    
+    let history=document.getElementById("history");
+    function calculation(v){
+        para=document.createElement('p');
+        para.innerText=v;
+        history.appendChild(para);
+
+
+    }
 
     
       

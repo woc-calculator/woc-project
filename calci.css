@@ -59,7 +59,7 @@ background-color: #ffffff;
                -5px -5px 8px #ffffff; 
                transition: .1s;
 }
-.btns .row button:hover
+.btns .row button:hover 
 {
     box-shadow: inset 5px 5px 8px rgba(16,16,16, .1),
                 inset -5px -5px 8px #ffffff;
@@ -98,6 +98,24 @@ background-color: #ffffff;
     box-shadow: inset 5px 5px 8px #5b36d4a9;
              inset: -5px -5px 8px #5b36d4a9;
 }
-
-
-
+#history{
+    width: 240px;
+    height:371.2px;
+    overflow-y: scroll;
+    font-size: 1.1em;
+    background:#4b7bec ;
+    box-sizing: border-box;
+    padding: 10px 20px;
+}
+#history ::-webkit-scrollbar{
+    width: 0;
+}
+#history h3{
+    padding: 10px 0px;
+    font-size: 1.2em;
+}
+#history p:last-child{
+    font-size: 1.3em;
+    font-weight: 500;
+    color:#eee;
+}
